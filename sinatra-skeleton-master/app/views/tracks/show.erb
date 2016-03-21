@@ -1,0 +1,28 @@
+<hr/>
+<h1><%= @track.song_title %></h1>
+
+<p>
+  Author: <%= @track.author %>
+</p>
+
+<p>
+  <%= @track.url  %>
+</p>
+
+<p>
+  <%= @track.created_at %>
+</p>
+
+<hr/>
+
+<h3>Other Tracks from this author</h3>
+
+<% @tracks.reverse.each do |track| %>
+ <p><%= track.song_title %> -- <%= track.created_at %></p>
+<% end %>
+
+
+
+<hr/>
+<a href="/tracks">Back to All Tracks</a>
+<hr/>
