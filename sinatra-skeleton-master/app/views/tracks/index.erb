@@ -5,7 +5,7 @@
   <div class="track">
     <h3><a href="/tracks/<%= track.id %>"><%= track.song_title %> <small>(by: <%= track.author %>)</small></a></h3>
     <p>
-      <!-- <a href="/tracks/<%= track.id %>">--> <%= track.url %></a>
+      <a href="http://#{track.url}"><%= track.url %></a>
     </p>
   </div>
   <hr/>
