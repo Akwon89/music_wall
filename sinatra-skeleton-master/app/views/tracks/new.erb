@@ -1,4 +1,6 @@
-<h1>Post a Track</h1>
+<div class="page-header">
+  <h1>Post a Track<small>  Something cool...</small></h1>
+</div>
 <hr/>
 
 <% if @track.errors.any? %>
@@ -15,17 +17,29 @@
 
 <form method="post" action="/tracks" >
   <div>
-    <label>Author:</label>
-    <input type="text" name="author" value="<%= @track.author %>">
+    <label for="basic-url">Author:</label>
+      <div class="input-group">
+      <span class="input-group-addon" id="basic-addon3">Artist</span>
+      <input type="text" name="author" value="<%= @track.author %>"> 
+      </div>
   </div>
+
   <div>
-    <label>Song_Title:</label>
-    <input type="text" name="song_title" value="<%= @track.song_title %>">
+  <label for="basic-url">Song Title:</label>
+      <div class="input-group">
+      <span class="input-group-addon" id="basic-addon3">song</span>
+      <input type="text" name="song_title" value="<%= @track.song_title %>"> 
+      </div>
   </div>
+
   <div>
-    <label>Url:</label>
-    <input type="text" name="url" value="<%= @track.url %>">
+    <label for="basic-url">Song URL:</label>
+      <div class="input-group">
+      <span class="input-group-addon" id="basic-addon3">Link to song</span>
+      <input type="text" name="url" value="<%= @track.url %>"> 
+      </div>
   </div>
+
   <div>
     <input type="submit" value="Submit">
   </div>
